@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    
+    --color-s-red:hsl(358, 79%, 66%);
+    --color-p-red:hsl(357, 100%, 86%);
+    --color-m-blue:hsl(238, 40%, 52%);
+    --color-blue:hsl(212, 24%, 26%);
+    --color-d-gray:hsl(211, 10%, 45%);
+    --color-gray:hsl(239, 57%, 85%);
+    --color-l-gray:hsl(223, 19%, 93%);
+    --color-light:hsl(228, 33%, 97%);
+    --color-white:hsl(0, 0%, 100%);
+
+}
+body{
+    font-size:16px ;
+    font-family: 'Rubik', sans-serif;
+    
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
