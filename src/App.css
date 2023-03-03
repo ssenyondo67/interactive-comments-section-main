@@ -3,7 +3,8 @@
 
 main{
   padding: 1px;  
-  background:var(--color-l-gray);  
+  background:var(--color-l-gray); 
+  min-height: 100vh; 
 }
 .comments-container{
   width: min(90%,40rem);

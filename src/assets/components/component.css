@@ -68,6 +68,7 @@ input{
     margin-right: .4rem;
 }
 .delete{
+    margin-left: .5rem;
     color: var(--color-s-red);
 }
 .delete:hover{
@@ -100,6 +101,7 @@ input{
     margin-bottom: .5rem;
     font-weight: 400;
     color: var(--color-d-gray);
+    z-index: 1;
 }
 
 
@@ -139,22 +141,25 @@ input{
     align-self: stretch;
 
 }
+.textarea:hover{
+    border: 2px solid var(--color-gray);
+}
 .reply-btn{
     grid-row: 2/-1;
     grid-column: 2/-1;
+    background: var(--color-m-blue);
+    width: 5rem;
+    font-size: 1.3em;
+    height: 2rem;
+    align-self:flex-start;
+    justify-self: flex-end;
 }
 .btn{    
     cursor: pointer;
     outline: none;
-    border: 0;
-    background: var(--color-m-blue);
-    font-weight: 500;
-    font-size: 1.3em;
-    color:var(--color-white);
-    width: 5rem;
-    height: 2rem;
-    align-self: center;
-    justify-self: flex-end;
+    border: 0;   
+    font-weight: 500;   
+    color:var(--color-white);   
     border-radius: 5px;
 
 }
@@ -172,8 +177,64 @@ input{
     border-left: 1px solid var(--color-gray);
     
    }
+   
+
+.delete--container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    outline: 100vw solid rgba(0,0, 0, 0.5);
+    padding: 1rem;
+    color: var(--color-d-gray);
+    width: min(80%,20rem);
+    border-radius: 10px;
+    z-index: 1;
+    background: var(--color-white);
+}
+
+.delete--container h3{
+   margin-bottom: .5rem;
+}
+
+.delete--container p{
+    margin-bottom: 1.2rem;
+    font-size: .9rem;
+ }
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+}
+.btn-cancel,
+.btn-remove{
+    flex: 1;
+    font-size: 1.2em;
+    padding-block: .3em;
+}
+
+.btn-cancel{
+  background: var(--color-d-gray);
+}
+.btn-remove{
+   background: var(--color-p-red);
+}
+
+
+.btn-cancel:hover{
+    background: var(--color-d-gray);
+  }
+  .btn-remove:hover{
+     background: var(--color-p-red);
+  }
 
 @media (min-width:600px) {
+    .textEditor{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
     .reply-container{
      margin-left: 1.5rem;
      padding-left: 1.5rem;
@@ -232,7 +293,7 @@ input{
 
     .add-comment{
         display: flex;
-        align-items: center;
+        align-items: self-start;
         justify-content: space-between;
     }
 
