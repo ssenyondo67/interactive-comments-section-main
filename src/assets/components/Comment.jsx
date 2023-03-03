@@ -83,14 +83,14 @@ export default function Comment({comment}){
     return(
           <>
            <div  className="comment-container">
-            <div onClick={comment.replyingTo? doNothing:expand} className="comment">
+            <div  className="comment">
               <div className="score input-group">
                 <img src={plus} alt="plus" id="plus" className="math-icon plus" onClick={add}/>
                 <input type='number' id="number" placeholder={comment.score} onKeyUp={numberOnly}/>
                 <img src={minus} alt="minus" id="minus" className="math-icon minus" onClick={subtract}/>
               </div>
 
-              <div className="user-info">                
+              <div className="user-info" onClick={comment.replyingTo? doNothing:expand}>                
                 <img src={comment.user.image.webp} alt="user" className="  user-img" />              
                 <h3 className="user-name">{comment.user.username}</h3>
                 <p className="time">{comment.createdAt}</p>
@@ -132,7 +132,7 @@ export default function Comment({comment}){
                 </div>
               )
               }
-              <div className="user-comment">
+              <div className="user-comment" onClick={comment.replyingTo? doNothing:expand}>
                 {toEdit?(
                 <div className="textEditor">
                   <textarea name="comment" id="comment" className="textarea" defaultValue={`@${comment.replyingTo} ${comment.content}`} placeholder="Add comment"></textarea>
